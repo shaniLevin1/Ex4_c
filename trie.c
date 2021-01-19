@@ -145,7 +145,7 @@ node* currNode;
 root->word[x++]=root->currNode->letter; //append root to word array
 if (root->currNode->EndOfWord) {
 root->word[x]='\0';
-printf("%s\t%ld\n",root->word,root->currNode->count);
+printf("%s %ld\n",root->word,root->currNode->count);
 }
 if (root->currNode->hasChild) {
 for(i=0; i<NUM; ++i) { //
@@ -181,14 +181,14 @@ root->currNode = currNode;
 } else {
 if (root->currNode->EndOfWord){
 root->word[x]='\0';
-printf("%s\t%ld\n",root->word,root->currNode->count);
+printf("%s %ld\n",root->word,root->currNode->count);
 }
 --x;
 return;
 }
 if (root->currNode->EndOfWord){
 root->word[x]='\0';
-printf("%s\t%ld\n",root->word,root->currNode->count);
+printf("%s %ld\n",root->word,root->currNode->count);
 }
 --x;
 }
